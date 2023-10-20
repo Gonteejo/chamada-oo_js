@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Exercício POO JS</title>
+</head>
+
+<body>
+    <div class="py-5 container">
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8 mx-auto">
+                <h2 class="mb-3">
+                    Monte seu personagem
+                </h2>
+                <form class="needs-validation" id="needs-validation">
+                    <div class="row g-3">
+                        <div class="col-sm-5">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder value required>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="idade" class="form-label">Idade</label>
+                            <input type="number" class="form-control" id="idade" placeholder required min="13" max="120">
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="sexo" class="form-label">sexo</label>
+                            <select class="form-select" id="sexo" required>
+                                <option value=""></option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="classe" class="form-label">Classe</label>
+                            <select class="form-select mb-3" id="classe" required>
+                                <option value=""></option>
+                                <option value="mago">Mago</option>
+                                <option value="guerreiro">Guerreiro</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4 d-none" id="skillGuerreiro">
+                            <label>Escolha uma skill</label>
+                            <div class="mb-3">
+                                <div class="skillGuerreiro">
+                                    <input id="perfurar" name="skillGuerreiro" type="radio" class="skillGuerreiro-input"
+                                        value="Perfurar" checked required>
+                                    <label class="skillGuerreiro-label" for="perfurar">Perfurar</label>
+                                </div>
+                                <div class="skillGuerreiro">
+                                    <input id="brandirLança" name="skillGuerreiro" type="radio"
+                                        class="skillGuerreiro-input" value="Brandir Lança" required>
+                                    <label class="skillGuerreiro-label" for="brandirLança">Brandir Lança</label>
+                                </div>
+                                <div class="skillGuerreiro">
+                                    <input id="impactoExplosivo" name="skillGuerreiro" type="radio"
+                                        class="skillGuerreiro-input" value="Impacto Explosivo" required>
+                                    <label class="skillGuerreiro-label" for="impactoExplosivo">Impacto Explosivo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 d-none" id="skillMago">
+                            <label>Escolha uma skill</label>
+                            <div class="mb-3">
+                                <div class="skillMago">
+                                    <input id="bolaDeFogo" name="skillMago" type="radio" class="skillMago-input"
+                                        value="Bola de fogo" checked required>
+                                    <label class="skillMago-label" for="bolaDeFogo">Bola de Fogo</label>
+                                </div>
+                                <div class="skillMago">
+                                    <input id="paredeDeFogo" name="skillMago" type="radio" class="skillMago-input"
+                                        value="Parede de fogo" required>
+                                    <label class="skillMago-label" for="paredeDeFogo">Parede de Fogo</label>
+                                </div>
+                                <div class="skillMago">
+                                    <input id="lancaDeRaios" name="skillMago" type="radio" class="skillMago-input"
+                                        value="Lança de raios" required>
+                                    <label class="form-check-label" for="lancaDeRaios">Lança de Raios</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" id="salvarPersonagem">Salvar
+                        personagem</button>
+                </form>
+                <hr class="my-4">
+                <h2 class="mb-3">
+                    Seu personagem
+                </h2>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-sm-5">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="exibeNome" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="form-label">Idade</label>
+                            <input type="number" class="form-control" id="exibeIdade" readonly>
+                        </div>
+                        <div class="col-sm-5">
+                            <label class="form-label">sexo</label>
+                            <input type="text" class="form-control" id="exibeSexo" readonly>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label class="form-label">
+                                <h5 class="my-3">Ataque básico</h5>
+                            </label>
+                            <input type="text" class="form-control mb-3" id="exibeAtaqueBasico" readonly>
+                            <button class="w-100 btn btn-primary btn-lg" type="submit" id="ataqueBasico">Atacar</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">
+                                <h5 class="my-3">Magia</h5>
+                            </label>
+                            <input type="text" class="form-control mb-3" id="ExibiSkill" readonly>
+                            <button class="w-100 btn btn-primary btn-lg" type="submit" id="ataqueSkill">Atacar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Index.js"></script>
+</body>
+
+</html>
